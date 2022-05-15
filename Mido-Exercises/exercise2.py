@@ -11,7 +11,7 @@ midi_file = mido.MidiFile("../data/liebesleid.mid")
 
 for i, track in enumerate(midi_file.tracks):  # for each track...
     for j, event in enumerate(track):  # for each event in the track
-        if event.type == "note_on" or event.type == "note_off":  # if that event turns a not on or turns a note off
+        if event.type == "note_on" or event.type == "note_off":  # if that event turns a note on or turns a note off
             event.note += 2  # transpose its note up a major 2nd
 
 # save the altered midi file

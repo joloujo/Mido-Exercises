@@ -10,7 +10,7 @@ midi_file = mido.MidiFile("../data/exercise3_input.mid")
 #         print('{}: {}'.format(j, event))
 
 for event in midi_file.tracks[1]:  # for each event in track 1 (1st instrument)
-    if event.type == "note_on" or event.type == "note_off":  # if that event turns a not on or turns a note off
+    if event.type == "note_on" or event.type == "note_off":  # if that event turns a note on or turns a note off
 
         if event.time == 480:  # if the note is a quarter note
             event.time = 240  # change it to an eighth note
